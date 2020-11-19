@@ -1,4 +1,4 @@
-#SMS Spam Collection Dataset#
+# SMS Spam Collection Dataset #
 
 *Collection of SMS messages tagged as spam or legitimate*
 
