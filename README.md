@@ -1,4 +1,9 @@
-# Predict-Food-Delivery #
+#SMS Spam Collection Dataset#
+*Collection of SMS messages tagged as spam or legitimate*
 
-The provided data contains three .xslx files with 18 columns. Use this data to predict the time take for food to be delivered.
-[Here is a link to the dataset](https://https://www.kaggle.com/ramprasad273/predicting-food-delivery-time)
+
+**Content**
+
+The SMS Spam Collection is a set of SMS tagged messages that have been collected for SMS Spam research. It contains one set of SMS messages in English of 5,574 messages, tagged acording being ham (legitimate) or spam.
+
+[Here is a link to the dataset](https://www.kaggle.com/uciml/sms-spam-collection-dataset)
