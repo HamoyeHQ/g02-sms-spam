@@ -1,0 +1,21 @@
+Explaination of the Spam classification pipeline
+
+1) we initialize the pipeline by first creating a volume/ storage space for the model
+
+2) In the deploy component we first run a check to see if there are any configuration files for the model inside the storage space, 
+if there isn't it creates a model and stores the configuration file inside the storage space...so in short, 
+this component only runs on initialization of the pipeline, if there are confiuration files in the volume, it does nothing
+
+3) In the data transformation step, the data is retrieved from where its stored,
+processes it into a form which our lstm model can easily understand and make inferences and stored the procesed data inside the storage space
+
+4) In the predict component, the model is coupled up using the configuration files in storage,
+then the newly coupled model is compiled and used to make prediction on the processed data which is retrieved from storage.
+It saves the predictions in a pickle file and dumps it in the storage space.
+
+5) In the monitor component, the predictions are rerieved from storage,
+the preprocessed file is retrieved also and its labels are extracted from if there is any,
+the original test data is recieved as well.
+here if the test data had labels, this component runs the print validation result showing the f1 score, precision score and the actual predictions.
+if there is no labels in the test files, the predictions are printed out on the console.
+Also, the data is separated into 2 differnt set, one set contains only spam sms (spam_sms.csv) and the other contains only the regular sms (regular.csv).
